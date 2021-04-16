@@ -1,0 +1,117 @@
+.movie_page {
+    display: flex;
+    color: var(--textcolor1);
+    justify-content: center;
+    column-gap: 2em;
+}
+
+.poster {
+    display: flex;
+    flex-direction: column;
+}
+
+.poster {
+    width: 18em;
+}
+
+.poster > .button_group {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+.poster >  .button_group > a {
+    width: 50%;
+    border: 0;
+    background-color: var(--bgcolor1);
+    color: var(--mcolor2);
+    text-decoration: none;
+    padding: 0.5em;
+    text-align: center;
+    transition: all 300ms ease-in-out;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: .7em;
+}
+
+.poster > .button_group > a:hover {
+    cursor: pointer;
+    color: var(--textcolor2);
+    background-color: var(--color5);
+}
+
+.poster > .button_group > a:nth-child(1)   {
+    border-right: .1em var(--color5) solid;
+}
+.poster > .button_group> a:nth-child(2)  {
+    border-left: .1em var(--color5) solid;
+}
+
+
+.info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+}
+
+.info > .overview, .footer >  p {
+    width: clamp(45ch, 70%, 90ch);
+}
+
+.info > .heading {
+    display: flex;
+    flex-direction: column;
+    row-gap: .2em;
+}
+
+.info > .heading > .title {
+    font-size: 2em;
+    font-weight: 900;
+}
+
+.info > .heading > .subinfo {
+    font-size: 1.2em;
+}
+
+
+.info > .heading > .subinfo > .subinfo1 {
+    display: flex;
+    flex-direction: row;
+}
+
+.info > .heading > .subinfo > .subinfo2 {
+   display: flex;
+   flex-direction: row;
+   column-gap: .5em;
+   font-size: .8em;
+}
+
+.info > .overview {
+    line-height: 1.3em;
+    letter-spacing: .05em;
+}
+
+.info > .footer {
+    line-height: 1.3em;
+    font-size: 1em;
+}
+.info > .footer > p > b {
+    font-weight: 600;
+}
+
+
+@media (min-width: 320px) and (max-width: 850px) {
+    .movie_page {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+    }    
+    .info > .overview, .footer >  p {
+        width: auto;
+    }
+  }
+
+

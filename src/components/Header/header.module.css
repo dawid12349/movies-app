@@ -1,0 +1,42 @@
+.wrapper {
+    width: auto;
+    align-content: center;
+    background-color: var(--bgcolor1);
+    display: flex;
+    column-gap: 1em;
+    color: var(--textcolor2);
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+
+.wrapper > .main_text  {
+    color: var(--textcolor2);
+    outline: none;
+    text-decoration: none;
+}
+
+.wrapper > .watchlist_text {
+    color: var(--textcolor2);
+    outline: none;
+    text-decoration: none;
+}
+
+
+@media (min-width: 1025px) {
+    .wrapper {
+        padding: .5em 5em;
+    }
+}
+  
+@media (min-width: 768px) and (max-width: 1024px) {
+    .wrapper {
+        padding: .5em 4em;
+    }
+    
+  }
+@media (min-width: 320px) and (max-width: 768px) {
+    .wrapper {
+        padding: .5em 2em;
+    }
+ }

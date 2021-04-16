@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Router, Route} from 'react-router-dom'
+
+import {GlobalProvider} from './context/GlobalState'
+
+import Header from './components/Header/Header.jsx'
+import Container from './components/Container/Container'
+
+import Home from './Pages/Home'
+import MoviePage from './Pages/MoviePage/MoviePage'
+import FavouritesPage from './Pages/FavouritesPage/FavouritesPage'
+import './App.css'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   return (
+    <GlobalProvider>
+      <Router>
+        <>  
+          <Header/>
+          <Container>
+                <Route path = {["/", "/home"]} exact component = {props => <Home {...props} />}/>
+                <Route path = "/movie/:id"  component = {MoviePage} />
+                <Route path = '/Favourites' exact component = {FavouritesPage}  />
+          </Container>
+        </>
+      </Router>
+    </GlobalProvider>
   );
 }
 
