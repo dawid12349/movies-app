@@ -1,4 +1,4 @@
-#Movies-app
+# Movies-app
 a simple movie app made by using React, Context API, themoviedb  
 
 ![obraz](https://user-images.githubusercontent.com/47251508/115161949-d5f8dc80-a0a0-11eb-94d4-b4c67c256c96.png)
