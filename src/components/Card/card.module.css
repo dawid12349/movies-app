@@ -42,7 +42,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    column-gap: ;
+    column-gap: 1em;
     color: var(--textcolor1);
     padding: 1em 1em;
     letter-spacing: 0.5px;
@@ -82,6 +82,8 @@
   left: 5px;
   object-fit: cover;
   display: none;
+  width: 1.5em;
+  height: auto;
   background: linear-gradient(transparent, #ccc);
 }
 

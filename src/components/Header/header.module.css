@@ -5,7 +5,7 @@
     display: flex;
     column-gap: 1em;
     color: var(--textcolor2);
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: 700;
 }
 
@@ -22,6 +22,10 @@
     text-decoration: none;
 }
 
+.main_text:hover, .watchlist_text:hover{
+    color: #F0ece2;
+}
+
 
 @media (min-width: 1025px) {
     .wrapper {
@@ -31,12 +35,13 @@
   
 @media (min-width: 768px) and (max-width: 1024px) {
     .wrapper {
-        padding: .5em 4em;
+        padding: .5em 3em;
     }
     
   }
 @media (min-width: 320px) and (max-width: 768px) {
     .wrapper {
-        padding: .5em 2em;
+        padding: .5em 1em;
     }
  }
+

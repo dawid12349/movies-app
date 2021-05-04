@@ -18,7 +18,7 @@ function useFetchMovies(url, options ) {
         }
 
         fetchData();
-    }, [url])
+    }, [url, options])
 
     return { data, error, loading }
 }

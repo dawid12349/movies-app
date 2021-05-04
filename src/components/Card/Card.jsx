@@ -22,7 +22,7 @@ function Card(props) {
             {!is ? 
                 <FaHeart className = {styles.icon} color = 'red'  title = {"add to favorites"} onClick = {()=> addMovieToFavourites(props.movie)}/> : 
                 <FaHeartBroken className = {styles.icon} color= 'red' title = {"remove from favorites"} onClick = {()=> removeFromFavourites(props.movie.id)} />}
-            <img src = {IMGPATH + props.movie.poster_path} alt="No Image found" onLoad={props.imageLoaded} onError = {(e) => {e.target.onerror = null; e.target.src='NoImage.jpg'}}></img>
+            <img src = {IMGPATH + props.movie.poster_path} alt="No Image found" onError = {(e) => {e.target.onerror = null; e.target.src='NoImage.jpg'}}></img>
             <Link to = {`/movie/${props.movie.id}`} movie = {props.movie} id = {props.movie.id} className = {styles.card_content}>
                 <h4>{props.movie.title}</h4>
                 <span className = {getClassRating(props.movie.vote_average)}>{props.movie.vote_average}</span>
